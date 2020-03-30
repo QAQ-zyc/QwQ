@@ -48,7 +48,18 @@ function addSpeed5x(){
     t.val("5.00"),t.next().text("5.00x");
 }
 function addStickyBar(){
-    $("body").prepend($('\n\t\t<div style="width: 450px;height: 30px;position: fixed;right: 0;top: 0;z-index: 9999;">\n\t\t\t<div style="height: 30px;width: 100%;">\n\t\t\t\t<button style="height: 30px;padding: 0 10px;border: none;border-radius: 2px;color: #fff;background-color: #ea5947;\n\t\t\ttext-align: center;line-height: 30px;outline: none;margin-right:15px;" onclick="showAnswer()">\n\t\t\t\t\t显示答案\n\t\t\t\t</button>\n\t\t\t\t<button style="height: 30px;padding: 0 10px;border: none;border-radius: 2px;color: #fff;background-color: #ea5947;\n\t\t\ttext-align: center;line-height: 30px;outline: none;margin-right:15px;" onclick="fillBlanks()">自动填空</button>\n\t\t\t\t<input type="text" id="speed-input" value="2.0" placeholder="倍速" style="width: 50px;">\n\t\t\t\t<button style="height: 30px;padding: 0 10px;border: none;border-radius: 2px;color: #fff;background-color: #ea5947;\n      text-align: center;line-height: 30px;outline: none;" onclick="handlerSpeedClick()">添加倍速</button>\n        <button style="height: 30px;padding: 0 10px;border: none;border-radius: 2px;color: #fff;background-color: #ea5947;\n\t\t\ttext-align: center;line-height: 30px;outline: none;" onclick="autoNextVideo()">自动换视频</button>\n\t\t\t</div>\n\t\t\t<p>Author:Mustard</p>\n\t\t</div>\n\t'))
+    $("body").prepend($('
+                            <div style="width: 450px;height: 100px;position: fixed;right: 0;top: 0;z-index: 9999;border: gray solid 1px;border-radius:3px;">
+                                <div style="height: 30px;width: 100%;">
+                                <button style="height: 30px;padding: 0px;border: none;border-radius: 3px;color: #fff;background-color: #ea5947;text-align: center;line-height: 30px;outline: none;margin:0px 15px 10px 0px;" onclick="showAnswer()">显示答案</button>
+                                <button style="height: 30px;padding: 0px;border: none;border-radius: 3px;color: #fff;background-color: #ea5947;text-align: center;line-height: 30px;outline: none;margin:0px 15px 10px 0px;" onclick="fillBlanks()">自动填空</button>
+                                <input type="text" id="speed-input" value="2.0" placeholder="倍速" style="width: 50px;"><br><br>
+                                <button style="height: 30px;padding: 0px;border: none;border-radius: 3px;color: #fff;background-color: #ea5947;text-align: center;line-height: 30px;outline: none;margin:0px 15px 10px 0px;" onclick="handlerSpeedClick()">添加倍速</button>
+                                <button style="height: 30px;padding: 0px;border: none;border-radius: 3px;color: #fff;background-color: #ea5947;text-align: center;line-height: 30px;outline: none;margin:0px 15px 10px 0px;" onclick="autoNextVideo()">自动换视频</button>
+                                </div>
+                                <p>Author:Mustard</p>
+                            </div>
+                        '));
 }
 function handlerSpeedClick(){
     quickVideo($("speed-input").val());
